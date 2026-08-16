@@ -1,0 +1,148 @@
+{
+  "dataset": "criteo",
+  "reference": {
+    "mean": 0.0073695281913840945,
+    "sd": 0.020209227537763743,
+    "batch_band": [
+      0.006483819743058966,
+      0.008255236639709222
+    ],
+    "n": 9785714
+  },
+  "batches": [
+    {
+      "batch": "batch_01",
+      "n": 2000,
+      "mean_uplift": 0.0073587116,
+      "std_uplift": 0.0193763748,
+      "psi": 0.0040519658,
+      "suppressed_share": 0.006,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-12T03:06:56+00:00"
+    },
+    {
+      "batch": "batch_02",
+      "n": 2000,
+      "mean_uplift": 0.0080709349,
+      "std_uplift": 0.0216985851,
+      "psi": 0.0121926605,
+      "suppressed_share": 0.0045,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-12T03:06:56+00:00"
+    },
+    {
+      "batch": "batch_03",
+      "n": 2000,
+      "mean_uplift": 0.0071922529,
+      "std_uplift": 0.0191080276,
+      "psi": 0.0033621888,
+      "suppressed_share": 0.01,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-12T03:06:56+00:00"
+    },
+    {
+      "batch": "batch_04 (covariate shift)",
+      "n": 2000,
+      "mean_uplift": 0.0150987544,
+      "std_uplift": 0.0213797424,
+      "psi": 6.5540146956,
+      "suppressed_share": 0.005,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "ALERT",
+      "reasons": [
+        "PSI 6.554 >= 0.25 \u2014 uplift distribution has shifted materially",
+        "mean uplift 0.0151 above reference band \u2014 verify data pipeline"
+      ],
+      "checked_at": "2026-08-12T03:06:57+00:00"
+    },
+    {
+      "batch": "batch_05",
+      "n": 2000,
+      "mean_uplift": 0.0078426748,
+      "std_uplift": 0.0212436145,
+      "psi": 0.0047161534,
+      "suppressed_share": 0.0035,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-12T03:06:57+00:00"
+    },
+    {
+      "batch": "batch_06 (effect decay)",
+      "n": 2000,
+      "mean_uplift": 0.0042770784,
+      "std_uplift": 0.0113757968,
+      "psi": 3.6238822882,
+      "suppressed_share": 0.007,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "ALERT",
+      "reasons": [
+        "PSI 3.624 >= 0.25 \u2014 uplift distribution has shifted materially",
+        "mean uplift 0.0043 below reference band [0.0065, 0.0083] \u2014 effect may be decaying"
+      ],
+      "checked_at": "2026-08-12T03:06:57+00:00"
+    },
+    {
+      "batch": "batch_07 (broken feature)",
+      "n": 2000,
+      "mean_uplift": 0.0042265802,
+      "std_uplift": 0.0099622148,
+      "psi": 0.0352267402,
+      "suppressed_share": 0.0065,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "ALERT",
+      "reasons": [
+        "mean uplift 0.0042 below reference band [0.0065, 0.0083] \u2014 effect may be decaying"
+      ],
+      "checked_at": "2026-08-12T03:06:58+00:00"
+    },
+    {
+      "batch": "batch_08",
+      "n": 2000,
+      "mean_uplift": 0.0070727308,
+      "std_uplift": 0.0193358801,
+      "psi": 0.0027274034,
+      "suppressed_share": 0.004,
+      "ref_mean": 0.0073695282,
+      "ref_mean_low": 0.0064838197,
+      "ref_mean_high": 0.0082552366,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-12T03:06:58+00:00"
+    }
+  ],
+  "n_alerts": 3,
+  "planted_scenarios": {
+    "covariate_shift": "ALERT",
+    "effect_decay": "ALERT",
+    "broken_feature": "ALERT"
+  },
+  "realized_effect": {
+    "top_frac": 0.3,
+    "predicted_uplift": 0.02175254437927048,
+    "observed_uplift": 0.029481843956334908,
+    "calibration_ratio": 1.3553285281160128,
+    "n_treated": 1074954,
+    "n_control": 183209
+  }
+}

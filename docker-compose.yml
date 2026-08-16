@@ -1,0 +1,28 @@
+# Runs the API and the dashboard side by side from the same image.
+#   docker compose up --build
+#   API:       http://localhost:8000/docs
+#   Dashboard: http://localhost:8501
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      UPLIFT_DATASET: hillstrom
+
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      UPLIFT_DATASET: hillstrom
+    # The dashboard reads the holdout data, which the serving image does not
+    # carry — mounted read-only rather than baked in, so the API image stays small.
+    volumes:
+      - ./data:/app/data:ro
+      - ./reports:/app/reports
+    command: >
+      streamlit run dashboard/app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true

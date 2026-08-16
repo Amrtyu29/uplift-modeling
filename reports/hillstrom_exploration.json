@@ -1,0 +1,177 @@
+{
+  "dataset": "hillstrom",
+  "n_rows": 64000,
+  "treated_share": 0.66709375,
+  "outcome": "visit",
+  "ate": {
+    "rate_treated": 0.16704923408441466,
+    "rate_control": 0.10616727682343002,
+    "ate": 0.06088195726098464,
+    "ate_ci_low": 0.0554385741869019,
+    "ate_ci_high": 0.06632534033506737,
+    "relative_lift": 0.5734531305935184,
+    "n_treated": 42694,
+    "n_control": 21306
+  },
+  "alt_outcomes": {
+    "conversion": {
+      "rate_treated": 0.010680657703658593,
+      "rate_control": 0.005726086548390125,
+      "ate": 0.004954571155268468,
+      "ate_ci_low": 0.003548400667793587,
+      "ate_ci_high": 0.006360741642743349,
+      "relative_lift": 0.865263057656967,
+      "n_treated": 42694,
+      "n_control": 21306
+    }
+  },
+  "balance": [
+    {
+      "feature": "zip_code_Surburban",
+      "mean_treated": 0.4476493224,
+      "mean_control": 0.4543077439,
+      "smd": -0.0133812748,
+      "p_value": 0.1820690663,
+      "balanced": true
+    },
+    {
+      "feature": "history",
+      "mean_treated": 243.5890209135,
+      "mean_control": 240.6241133087,
+      "smd": 0.0115718193,
+      "p_value": 0.2468215788,
+      "balanced": true
+    },
+    {
+      "feature": "zip_code_Rural",
+      "mean_treated": 0.1514137527,
+      "mean_control": 0.1475695608,
+      "smd": 0.0107808431,
+      "p_value": 0.2813721298,
+      "balanced": true
+    },
+    {
+      "feature": "womens",
+      "mean_treated": 0.5509118287,
+      "mean_control": 0.5464968153,
+      "smd": 0.0088720832,
+      "p_value": 0.3762545908,
+      "balanced": true
+    },
+    {
+      "feature": "zip_code_Urban",
+      "mean_treated": 0.4009369249,
+      "mean_control": 0.3981226953,
+      "smd": 0.0057455299,
+      "p_value": 0.5665069229,
+      "balanced": true
+    },
+    {
+      "feature": "newbie",
+      "mean_treated": 0.5016898109,
+      "mean_control": 0.5042574589,
+      "smd": -0.0051352747,
+      "p_value": 0.6084947365,
+      "balanced": true
+    },
+    {
+      "feature": "channel_Multichannel",
+      "mean_treated": 0.1228375439,
+      "mean_control": 0.1219577606,
+      "smd": 0.002684292,
+      "p_value": 0.7887878278,
+      "balanced": true
+    },
+    {
+      "feature": "channel_Web",
+      "mean_treated": 0.4400535386,
+      "mean_control": 0.4408313778,
+      "smd": -0.0015667947,
+      "p_value": 0.8758153369,
+      "balanced": true
+    },
+    {
+      "feature": "mens",
+      "mean_treated": 0.5509787519,
+      "mean_control": 0.5514582635,
+      "smd": -0.0009640707,
+      "p_value": 0.9233906839,
+      "balanced": true
+    },
+    {
+      "feature": "channel_Phone",
+      "mean_treated": 0.4371089175,
+      "mean_control": 0.4372108615,
+      "smd": -0.0002055125,
+      "p_value": 0.9836453834,
+      "balanced": true
+    },
+    {
+      "feature": "recency",
+      "mean_treated": 5.7606491551,
+      "mean_control": 5.7603754609,
+      "smd": 7.79397e-05,
+      "p_value": 0.9937949499,
+      "balanced": true
+    }
+  ],
+  "n_imbalanced_features": 0,
+  "naive_vs_uplift": {
+    "n_reversals": 2,
+    "reversals": [
+      {
+        "variable": "zip_code",
+        "top_by_response": "Rural",
+        "top_by_uplift": "Urban",
+        "uplift_of_response_pick": 0.051460366648324596,
+        "uplift_of_uplift_pick": 0.0632987586488285,
+        "table": [
+          {
+            "zip_code": "Rural",
+            "control_rate": 0.1535520867,
+            "treated_rate": 0.2050124533,
+            "uplift": 0.0514603666,
+            "n": 9563
+          },
+          {
+            "zip_code": "Surburban",
+            "control_rate": 0.099012987,
+            "treated_rate": 0.1605138113,
+            "uplift": 0.0615008243,
+            "n": 28776
+          },
+          {
+            "zip_code": "Urban",
+            "control_rate": 0.096815734,
+            "treated_rate": 0.1601144927,
+            "uplift": 0.0632987586,
+            "n": 25661
+          }
+        ]
+      },
+      {
+        "variable": "newbie",
+        "top_by_response": "0.0",
+        "top_by_uplift": "1.0",
+        "uplift_of_response_pick": 0.05897501668971922,
+        "uplift_of_uplift_pick": 0.06281642543318613,
+        "table": [
+          {
+            "newbie": "0.0",
+            "control_rate": 0.133729149,
+            "treated_rate": 0.1927041657,
+            "uplift": 0.0589750167,
+            "n": 31856
+          },
+          {
+            "newbie": "1.0",
+            "control_rate": 0.0788218794,
+            "treated_rate": 0.1416383048,
+            "uplift": 0.0628164254,
+            "n": 32144
+          }
+        ]
+      }
+    ]
+  }
+}

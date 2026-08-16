@@ -1,0 +1,102 @@
+{
+  "dataset": "hillstrom",
+  "n_draws": 200,
+  "credible_level": 0.9,
+  "posterior": {
+    "mean": 0.05552374872915749,
+    "sd_mean": 0.010735090828063062,
+    "sd_min": 0.0047203248922743244,
+    "sd_max": 0.02405782386432593,
+    "share_confident_positive": 0.9996875
+  },
+  "calibration": {
+    "factor": 1.7694784283049303,
+    "calibration_half": {
+      "nominal_level": 0.9,
+      "z_sd": 1.7694784283049303,
+      "z_mean": 0.7396393406975447,
+      "verdict": "over-confident \u2014 residuals are larger than the posterior claims",
+      "raw_coverage": 0.2,
+      "coverage_within_observation_noise": 0.7,
+      "mean_interval_width": 0.015953050041075577,
+      "n_bins": 10
+    },
+    "validation_before": {
+      "nominal_level": 0.9,
+      "z_sd": 1.399238937099729,
+      "z_mean": 0.06364037863214334,
+      "verdict": "consistent with calibration",
+      "raw_coverage": 0.2,
+      "coverage_within_observation_noise": 0.9,
+      "mean_interval_width": 0.015844453382950652,
+      "n_bins": 10
+    },
+    "validation_after": {
+      "nominal_level": 0.9,
+      "z_sd": 1.3405609121646458,
+      "z_mean": 0.05380654126889604,
+      "verdict": "consistent with calibration",
+      "raw_coverage": 0.3,
+      "coverage_within_observation_noise": 1.0,
+      "mean_interval_width": 0.028036418469414237,
+      "n_bins": 10
+    }
+  },
+  "policies": {
+    "posterior mean (point estimate)": {
+      "qini": 0.17629314594229664,
+      "best_depth": 1.0,
+      "profit": 8631.419555265717
+    },
+    "lower credible bound (cautious)": {
+      "qini": 0.1926537353129097,
+      "best_depth": 0.9500000000000001,
+      "profit": 9429.857276571505
+    },
+    "P(beats break-even) [conf 80%]": {
+      "qini": 0.14083615540135,
+      "best_depth": 0.8500000000000001,
+      "profit": 9633.413153073048
+    }
+  },
+  "confidence_rule": {
+    "confidence": 0.8,
+    "break_even_uplift": 0.001,
+    "share_contacted": 1.0,
+    "cost_sweep": [
+      {
+        "cost": 0.1,
+        "break_even": 0.001,
+        "share": 1.0
+      },
+      {
+        "cost": 0.5,
+        "break_even": 0.005,
+        "share": 0.9990625
+      },
+      {
+        "cost": 1.0,
+        "break_even": 0.01,
+        "share": 0.9920833333333333
+      },
+      {
+        "cost": 2.0,
+        "break_even": 0.02,
+        "share": 0.9235416666666667
+      },
+      {
+        "cost": 4.0,
+        "break_even": 0.04,
+        "share": 0.48114583333333333
+      },
+      {
+        "cost": 8.0,
+        "break_even": 0.08,
+        "share": 0.034270833333333334
+      }
+    ]
+  },
+  "variance_decomposition": {
+    "posterior_share": 0.05488655247766141
+  }
+}

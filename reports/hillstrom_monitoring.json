@@ -1,0 +1,148 @@
+{
+  "dataset": "hillstrom",
+  "reference": {
+    "mean": 0.05577641046153446,
+    "sd": 0.022881215692523618,
+    "batch_band": [
+      0.05477359696908663,
+      0.05677922395398229
+    ],
+    "n": 44800
+  },
+  "batches": [
+    {
+      "batch": "batch_01",
+      "n": 2000,
+      "mean_uplift": 0.0555001741,
+      "std_uplift": 0.0220410453,
+      "psi": 0.0065737981,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_02",
+      "n": 2000,
+      "mean_uplift": 0.055480833,
+      "std_uplift": 0.0226517507,
+      "psi": 0.0020902146,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_03",
+      "n": 2000,
+      "mean_uplift": 0.0561199319,
+      "std_uplift": 0.0230482426,
+      "psi": 0.0033039435,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_04 (covariate shift)",
+      "n": 2000,
+      "mean_uplift": 0.0555295596,
+      "std_uplift": 0.0248398838,
+      "psi": 0.2400188376,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "WARN",
+      "reasons": [
+        "PSI 0.240 >= 0.1 \u2014 uplift distribution drifting"
+      ],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_05",
+      "n": 2000,
+      "mean_uplift": 0.0557391325,
+      "std_uplift": 0.022365898,
+      "psi": 0.0055190274,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_06 (effect decay)",
+      "n": 2000,
+      "mean_uplift": 0.0310816732,
+      "std_uplift": 0.0130354781,
+      "psi": 2.9017256205,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "ALERT",
+      "reasons": [
+        "PSI 2.902 >= 0.25 \u2014 uplift distribution has shifted materially",
+        "mean uplift 0.0311 below reference band [0.0548, 0.0568] \u2014 effect may be decaying"
+      ],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_07 (broken feature)",
+      "n": 2000,
+      "mean_uplift": 0.0568894874,
+      "std_uplift": 0.0186661533,
+      "psi": 0.1133073763,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "WARN",
+      "reasons": [
+        "PSI 0.113 >= 0.1 \u2014 uplift distribution drifting",
+        "mean uplift 0.0569 above reference band \u2014 verify data pipeline"
+      ],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    },
+    {
+      "batch": "batch_08",
+      "n": 2000,
+      "mean_uplift": 0.0563357468,
+      "std_uplift": 0.023103469,
+      "psi": 0.0046427668,
+      "suppressed_share": 0.0,
+      "ref_mean": 0.0557764105,
+      "ref_mean_low": 0.054773597,
+      "ref_mean_high": 0.056779224,
+      "status": "OK",
+      "reasons": [],
+      "checked_at": "2026-08-11T06:59:29+00:00"
+    }
+  ],
+  "n_alerts": 3,
+  "planted_scenarios": {
+    "covariate_shift": "WARN",
+    "effect_decay": "ALERT",
+    "broken_feature": "WARN"
+  },
+  "realized_effect": {
+    "top_frac": 0.3,
+    "predicted_uplift": 0.08308229028810045,
+    "observed_uplift": 0.07886574778613564,
+    "calibration_ratio": 0.9492486005459971,
+    "n_treated": 3798,
+    "n_control": 1962
+  }
+}

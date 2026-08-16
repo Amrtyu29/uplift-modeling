@@ -1,0 +1,23 @@
+# Data is downloaded by scripts/00_download_data.py, never committed.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model artifacts are rebuilt by scripts/02_train.py.
+models/*.joblib
+mlruns/
+
+# Metrics and figures ARE committed (156 KB + 2.8 MB). Every number in the README
+# is quoted from these files, and reproducing them means a 460 MB download and
+# ~20 min of compute — a reviewer should be able to check the claims without that.
+reports/*.html
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.DS_Store

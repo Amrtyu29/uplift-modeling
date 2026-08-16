@@ -1,0 +1,246 @@
+{
+  "dataset": "hillstrom",
+  "model": "s_learner",
+  "alpha": 0.05,
+  "power": 0.8,
+  "measured": {
+    "rate_treated": 0.16707002888593958,
+    "rate_control": 0.10608668439993742,
+    "ate": 0.060983344486002164,
+    "ate_ci_low": 0.05104661521460854,
+    "ate_ci_high": 0.07092007375739579,
+    "relative_lift": 0.5748444758260174,
+    "n_treated": 12809,
+    "n_control": 6391
+  },
+  "test_1_treatment_effect": {
+    "n_control": 494,
+    "n_treated": 494,
+    "n_total": 988,
+    "mde_absolute": 0.060983344486002164,
+    "mde_relative": 0.5748444758260174,
+    "alpha": 0.05,
+    "power": 0.8,
+    "ratio": 1.0
+  },
+  "test_2_policy_comparison_response_rate": {
+    "depth": 0.9500000000000001,
+    "rate_policy_a_treat_all": 0.16707002888593958,
+    "rate_policy_b_targeted": 0.1631470495285961,
+    "expected_difference": -0.003922979357343481,
+    "effect_among_dropped": 0.07822176243228875,
+    "share_dropped": 0.04999999999999993,
+    "n_per_arm": 140603,
+    "n_total": 281206,
+    "detectable": true
+  },
+  "test_2_policy_comparison_profit": {
+    "depth": 0.9500000000000001,
+    "basis": "observed",
+    "profit_per_customer_a": 1.2374908267624327,
+    "profit_per_customer_b": 1.2458269511507893,
+    "difference": 0.008336124388356625,
+    "sd_a": 17.01762839616919,
+    "sd_b": 16.91431697005387,
+    "n_per_arm": 65023577,
+    "n_total": 130047154,
+    "b_is_better": true
+  },
+  "test_2_alternative_depths": [
+    {
+      "depth": 0.2,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 0.817277655867517,
+      "difference": -0.4202131708949157,
+      "sd_a": 17.01762839616919,
+      "sd_b": 11.45843602581436,
+      "n_per_arm": 18709,
+      "n_total": 37418,
+      "b_is_better": false
+    },
+    {
+      "depth": 0.3,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 0.9671840772276077,
+      "difference": -0.27030674953482503,
+      "sd_a": 17.01762839616919,
+      "sd_b": 13.71991083518343,
+      "n_per_arm": 51331,
+      "n_total": 102662,
+      "b_is_better": false
+    },
+    {
+      "depth": 0.5,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 1.111217746729749,
+      "difference": -0.12627308003268367,
+      "sd_a": 17.01762839616919,
+      "sd_b": 14.81873327569222,
+      "n_per_arm": 250652,
+      "n_total": 501304,
+      "b_is_better": false
+    },
+    {
+      "depth": 0.7,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 1.1737203306826849,
+      "difference": -0.06377049607974783,
+      "sd_a": 17.01762839616919,
+      "sd_b": 15.868368273184712,
+      "n_per_arm": 1044938,
+      "n_total": 2089876,
+      "b_is_better": false
+    },
+    {
+      "depth": 0.9,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 1.2165027638677097,
+      "difference": -0.020988062894722992,
+      "sd_a": 17.01762839616919,
+      "sd_b": 16.61071152796505,
+      "n_per_arm": 10076447,
+      "n_total": 20152894,
+      "b_is_better": false
+    }
+  ],
+  "test_3_decay_monitor": [
+    {
+      "baseline_effect": 0.060983344486002164,
+      "detectable_decay": 0.2,
+      "effect_after_decay": 0.04878667558880173,
+      "effect_difference_to_detect": 0.012196668897200433,
+      "n_total_holdout": 29719,
+      "alpha": 0.05,
+      "power": 0.8
+    },
+    {
+      "baseline_effect": 0.060983344486002164,
+      "detectable_decay": 0.3,
+      "effect_after_decay": 0.042688341140201515,
+      "effect_difference_to_detect": 0.01829500334580065,
+      "n_total_holdout": 13515,
+      "alpha": 0.05,
+      "power": 0.8
+    },
+    {
+      "baseline_effect": 0.060983344486002164,
+      "detectable_decay": 0.5,
+      "effect_after_decay": 0.030491672243001082,
+      "effect_difference_to_detect": 0.030491672243001082,
+      "n_total_holdout": 5083,
+      "alpha": 0.05,
+      "power": 0.8
+    }
+  ],
+  "testability_by_cost": [
+    {
+      "depth": 0.95,
+      "basis": "observed",
+      "profit_per_customer_a": 1.2374908267624327,
+      "profit_per_customer_b": 1.2458269511507893,
+      "difference": 0.008336124388356625,
+      "sd_a": 17.01762839616919,
+      "sd_b": 16.91431697005387,
+      "n_per_arm": 65023577,
+      "n_total": 130047154,
+      "b_is_better": true,
+      "cost_per_contact": 0.1
+    },
+    {
+      "depth": 0.95,
+      "basis": "observed",
+      "profit_per_customer_a": 1.0874908267624328,
+      "profit_per_customer_b": 1.1033269511507895,
+      "difference": 0.015836124388356687,
+      "sd_a": 17.017628396169194,
+      "sd_b": 16.914379894234443,
+      "n_per_arm": 18017853,
+      "n_total": 36035706,
+      "b_is_better": true,
+      "cost_per_contact": 0.25
+    },
+    {
+      "depth": 0.1,
+      "basis": "observed",
+      "profit_per_customer_a": 0.8374908267624328,
+      "profit_per_customer_b": 0.9435104225322563,
+      "difference": 0.10601959576982345,
+      "sd_a": 17.017628396169194,
+      "sd_b": 13.689190535641522,
+      "n_per_arm": 333080,
+      "n_total": 666160,
+      "b_is_better": true,
+      "cost_per_contact": 0.5
+    },
+    {
+      "depth": 0.1,
+      "basis": "observed",
+      "profit_per_customer_a": 0.5974908267624326,
+      "profit_per_customer_b": 0.9195104225322563,
+      "difference": 0.32201959576982375,
+      "sd_a": 17.01762839616919,
+      "sd_b": 13.686986928700836,
+      "n_per_arm": 36100,
+      "n_total": 72200,
+      "b_is_better": true,
+      "cost_per_contact": 0.74
+    },
+    {
+      "depth": 0.05,
+      "basis": "observed",
+      "profit_per_customer_a": 0.3374908267624327,
+      "profit_per_customer_b": 0.9008960594356572,
+      "difference": 0.5634052326732245,
+      "sd_a": 17.017628396169194,
+      "sd_b": 13.42767459823398,
+      "n_per_arm": 11620,
+      "n_total": 23240,
+      "b_is_better": true,
+      "cost_per_contact": 1.0
+    },
+    {
+      "depth": 0.05,
+      "basis": "observed",
+      "profit_per_customer_a": -0.6625091732375672,
+      "profit_per_customer_b": 0.8508960594356572,
+      "difference": 1.5134052326732244,
+      "sd_a": 17.017628396169194,
+      "sd_b": 13.421340885828604,
+      "n_per_arm": 1610,
+      "n_total": 3220,
+      "b_is_better": true,
+      "cost_per_contact": 2.0
+    }
+  ],
+  "duration": [
+    {
+      "daily_traffic": 2000,
+      "days": 65023.577,
+      "weeks": 9289.0824285714,
+      "feasible_in_a_quarter": false
+    },
+    {
+      "daily_traffic": 10000,
+      "days": 13004.7154,
+      "weeks": 1857.8164857143,
+      "feasible_in_a_quarter": false
+    },
+    {
+      "daily_traffic": 50000,
+      "days": 2600.94308,
+      "weeks": 371.5632971429,
+      "feasible_in_a_quarter": false
+    },
+    {
+      "daily_traffic": 200000,
+      "days": 650.23577,
+      "weeks": 92.8908242857,
+      "feasible_in_a_quarter": false
+    }
+  ]
+}
