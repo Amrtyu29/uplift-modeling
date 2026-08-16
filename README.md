@@ -531,6 +531,22 @@ detail in [docs/causal_assumptions.md](docs/causal_assumptions.md).
 
 ---
 
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+That covers **this code only**. Neither dataset is redistributed here; both are
+downloaded by `scripts/00_download_data.py` from their original sources and carry
+their own terms:
+
+- **Hillstrom** — released publicly by Kevin Hillstrom (MineThatData) for the
+  2008 E-Mail Analytics Challenge.
+- **Criteo Uplift v2.1** — released by Criteo under **CC BY-NC-SA 4.0**, which is
+  *non-commercial*. Nothing in the MIT license above relaxes that; if you use
+  this pipeline commercially, the Criteo data is not yours to bring along.
+
+---
+
 ## Repository layout
 
 ```

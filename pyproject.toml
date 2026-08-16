@@ -7,6 +7,8 @@ name = "uplift-modeling"
 version = "1.0.0"
 description = "Uplift modeling and incremental impact simulator with causal validation, policy simulation and drift monitoring"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.26",
