@@ -7,6 +7,21 @@ at the top, and spends the budget on people who needed no persuading. This syste
 estimates the *causal effect of contacting each customer*, validates it against
 randomized holdout data, and prices the resulting targeting policy in dollars.
 
+<!-- ---------------------------------------------------------------------
+     WALKTHROUGH VIDEO — not recorded yet.
+
+     When the Loom exists, delete this comment block and paste the two lines
+     below into its place (swap in the real share URL):
+
+**[▶ 3-minute walkthrough](https://www.loom.com/share/PASTE_ID_HERE)** — the
+problem, the Qini validation, and the break-even result that decides the policy.
+
+     A shot-by-shot script with timings and the exact numbers to quote is in
+     docs/walkthrough_script.md. Recording notes: use the Loom share link, not
+     the embed URL; GitHub will not play an embedded iframe, so a plain link
+     with a thumbnail is the only thing that works in a README.
+     --------------------------------------------------------------------- -->
+
 ---
 
 ## The money chart
